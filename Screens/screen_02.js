@@ -3,7 +3,7 @@ import { ActivityIndicator, Image, Text, TouchableOpacity } from 'react-native'
 import { View } from 'react-native'
 import { FlatList, ScrollView, TextInput } from 'react-native-web'
 
-const Screen02 = ({ navigation, route }) => {
+const screen_02 = ({ navigation, route }) => {
 
 
     const [isLoading, setIsLoading] = useState(false)
@@ -338,4 +338,4 @@ const Screen02 = ({ navigation, route }) => {
     )
 }
 
-export default Screen02
+export default screen_02
