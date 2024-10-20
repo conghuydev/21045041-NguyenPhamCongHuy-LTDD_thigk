@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import Entypo from '@expo/vector-icons/Entypo';
 const screen_01 = () => {
     const navigation = useNavigation();
     
@@ -17,7 +18,7 @@ const screen_01 = () => {
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+``
     const handleLogin = () => {
      
         const user = users.find(user => user.email === email && user.password === password);
@@ -36,8 +37,10 @@ const screen_01 = () => {
                 <Text>Log into your account</Text>
             </View>  
 
-            <View style={{ marginBottom: 15, borderWidth: 1, borderRadius: 13, padding: 10, marginTop:30, width:'85%', marginLeft:30}}>
+            <View style={{ marginBottom: 15, borderWidth: 1, borderRadius: 13, padding: 10, marginTop:30, width:'85%', marginLeft:30, flexDirection:'row'}}>
+            <MaterialIcons name="email" size={24} color="black" style={{paddingRight:10}} />
                 <TextInput
+                
                     value={email}
                     placeholder='Enter your email address'
                     onChangeText={setEmail} 
@@ -45,7 +48,8 @@ const screen_01 = () => {
                 />
             </View>
 
-            <View style={{ marginBottom: 15, borderWidth: 1, borderRadius: 13, padding: 10, marginTop:10, width:'85%', marginLeft:30}}>
+            <View style={{ marginBottom: 15, borderWidth: 1, borderRadius: 13, padding: 10, marginTop:10, width:'85%', marginLeft:30, flexDirection:'row'}}>
+            <Entypo name="lock" size={24} color="black" style={{paddingRight:10}}/>
                 <TextInput
                     value={password}
                     placeholder='Enter your password'
